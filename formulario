@@ -1,0 +1,183 @@
+<!DOCTYPE html> 
+<html>
+ <head> 
+  <meta charset="utf-8">
+  <title>Curso Completo do Desenvolvedor Web</title>
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"> 
+ </head>  
+ <body>
+    <form method="POST" action="form.php">
+	
+	  <!-- GROUP NOME TRABALHANDO COM TABINDEX(MUDAR A ORDEM DO INPUT TAB)
+	  TESTANDO TAMBÉM A FUNÇÃO DISABLED--> 
+      <div class="form-group"> 
+	   <label for="nome"> Nome : </label>
+	   <input type="text" name="nome" id="nome" class="form-control"
+	   placeholder="Digite o seu nome" required autofocus tabindex="1" disabled=""> 
+	  </div>
+	  
+	   
+       <!-- GROUP EMAIL COM READONLY-->
+      <div class="form-group"> 
+	   <label for="email"> E-Mail : </label>
+	   <input type="email" name="email" id="email" class="form-control"
+	   placeholder="Digite o seu email" tabindex="2" readonly> 
+	  </div>
+	  
+	  <!-- GROUP DATA NASCIMENTO-->
+	  <div class="form-group"> 
+	   <label for="nascimento"> Nascimento: </label>
+	   <input type="date" name="nascimento" id="nascimento" class="form-control" required min="2017-01-01" max="2017-02-23">
+	  </div>
+
+	    <!-- GROUP SEXO-->
+	  <div class="form-group"> 
+	   <label> Sexo: </label>
+	   <input type="radio" name="sexo" id="masculino">
+	   <label for="masculino"> Masculino </label> 
+	   <input type="radio" name="sexo" id="feminino">
+	   <label for="feminino"> Feminino </label> 
+	  </div>
+
+	  <!-- GROUP RADIO ACEITAR CONTRATO -->
+      <div class="form-group"> 
+	    <label for="li"> Li o contrato!	 </label>
+	    <input type="checkbox" name="li" id="li" required checked=""> 
+	  </div>
+
+      <!-- GROUP BOTAO DE VOLUME -->
+      <div class="form-group">
+       <label for="volume">Volume</label>
+       <input type="range" name="volume" id="volume"
+        min="0" max = "100" value ="25"> 	
+      </div>
+
+      <!-- GROUP BARRA DE PORCENTAGEM/CARREGANDO BATERIA --> 
+      <div class="form-group">
+       <label for="meter">Bateria</label>
+       <meter  min="0" name="meter" max="100" low="25" value="25"> 25% </meter> 	
+      </div>
+
+      <!-- GROUP BARRA DE PORCENTAGEM (COM PROGRESS)--> 
+      <div class="form-group">
+       <label for="meter">Carregando</label>
+      <progress value="60" min="0" max="100"> 60% </progress>	
+      </div>
+
+      <!-- GROUP ANO DE FABRICACAO-->
+      <div class="form-group"> 
+	   <label for="ano"> Ano de Fabricação : </label>
+	   <input type="number" name="ano" id="ano" min="1920" max="2017" value ="2017" class="form-control" step="10"
+	   placeholder="Digite o ano de Fabricação" tabindex="3"> 
+	  </div>
+
+	  <!-- GROUP CORES-->
+      <div class="form-group"> 
+	   <label for="cor"> Cor : </label>
+	   <input type="color" name="cor" id="cor" class="form-control"> 
+	  </div>
+
+	  <!-- GROUP INSIRA URL-->
+      <div class="form-group"> 
+	   <label for="url"> URL : </label>
+	   <input type="url" name="url" id="url" class="form-control"> 
+	  </div>
+
+	  <!-- GROUP BUSCAR/SEARCH-->
+      <div class="form-group"> 
+	   <label for="busca"> Busca : </label>
+	   <input type="SEARCH" name="busca" id="busca" class="form-control"> 
+	  </div> 
+
+	  <!-- GROUP TEXTAREA-->
+      <div class="form-group"> 
+	   <label for="mensagem"> Mensagem : </label>
+	   <textarea name="mensagem" id="mensagem" cols="30" rows="10"></textarea>
+	  </div>
+
+	  <!-- GROUP SELECIONAR ESTADOS SEM MULTIPLE SIZE-->
+      <div class="form-group"> 
+	   <label for="estados"> ESTADOS : </label>
+	   <select name="Estados" id="Estados">
+	     <optgroup label="Sudeste">
+	   	<option value ="SP"> SAO PAULO </option>
+        <option value ="RJ" selected> RIO DE JANEIRO </option>
+        <option value ="MG"> MINAS GERAIS </option>
+        </optgroup>
+        <optgroup label="Sul">
+        <option value ="PR"> PARANÁ </option>
+        <option value ="SC"> SANTA CATARINA </option>
+        <option value ="BH"> BELO HORIZONTE </option>
+        </optgroup>
+	   </select>
+	  </div> 
+
+	  	  <!-- GROUP SELECIONAR ESTADO C/ MULTIPLESIZE-->
+      <div class="form-group"> 
+	   <label for="estados"> ESTADOS : </label>
+	   <select name="Estados" id="Estados" multiple size="3">
+	     <optgroup label="Sudeste">
+	   	<option value ="SP"> SAO PAULO </option>
+        <option value ="RJ" selected> RIO DE JANEIRO </option>
+        <option value ="MG"> MINAS GERAIS </option>
+        </optgroup>
+        <optgroup label="Sul">
+        <option value ="PR"> PARANÁ </option>
+        <option value ="SC"> SANTA CATARINA </option>
+        <option value ="BH"> BELO HORIZONTE </option>
+        </optgroup>
+	   </select>
+	  </div> 
+
+
+      <!-- CRIANDO UM CAMPO OCULTO -->
+	  <input type="hidden" name="id" value="1">
+
+       <!-- CRIANDO UM CAMPO SENHA -->
+       <div class="form-group">
+       	<label for="senha"> Senha : </label>
+        <input type="password" name="senha" id = "senha" 
+       </div>
+       
+       <!-- CRIANDO UM CAMPO QUE CAPTURE O MES--> 
+       <div class="form-group">
+       	 <label for="mes"> Mês </label>
+       	 <input type="month" name="mes" id = "mes" class="form-control">
+       </div>
+
+       <!-- CRIANDO UM CAMPO QUE CAPTURE A SEMANA--> 
+       <div class="form-group">
+       	 <label for="mes"> Semana :  </label>
+       	 <input type="week" name="semana" id = "semana" class="form-control">
+       </div>
+
+        <!-- CRIANDO UM CAMPO QUE CAPTURE A HORA--> 
+       <div class="form-group">
+       	 <label for="hora"> Hora :  </label>
+       	 <input type="time" name="hora" id = "hora" class="form-control">
+       </div>
+
+
+	  <!--CRIANDO UM DATALIST--> 
+	  <div class="form-group">
+	   <input type="text" list="navegadores">
+	   <datalist id="navegadores">
+         <option value="chrome">
+         <option value="firefox">
+         <option value="safari">
+         <option value="edge">
+         <option value="opera">
+         
+
+	   </datalist>
+
+	  <!-- BOTAO CONFIRMA QUE DISPARA O EVENTO CADASTRAR-->
+       <div>
+	      <button type="submit" class="btn btn-primary"> Cadastrar </button>
+	   </div>
+
+	</form>
+ 
+ 
+ </body>
+</html>
