@@ -1,4 +1,5 @@
 <!DOCTYPE html> 
+
 <html>
 <head>
 
@@ -8,9 +9,7 @@
  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
  <link rel="stylesheet" href="lib/bootstrap/css/orlando.css">
 
-
-
-</head>	
+</head>
 
 <body>
 
@@ -19,8 +18,6 @@
     <div class="container">
       <img src="img/orlando-logo.png" id="logotipo" alt="Logotipo">
     </div> 
-
-
 
     <div class="header-black">
 
@@ -56,10 +53,6 @@
 
   </div> 
 
-
-
-
-
   <div class ="container">
 
    <div class ="row">
@@ -72,7 +65,7 @@
 
        <li class="search">
          <div class="input-group">
-          <input type="search" placeholder="search">
+          <input type="search" placeholder=" Search" id="input-search">
           <span class="input-group-btn">
             <button type="button"><i class="fa fa-search"></i></button>
           </span>
@@ -84,12 +77,9 @@
 </div>
 </div>
 
-
 </header>
 
-
 <section>
-
 
  <div id="banner">
 
@@ -145,7 +135,6 @@
         <p> 7Th<small>Eastern Conference</small></p>
       </div>
 
-
        </div>
     </div>
    </div>
@@ -181,12 +170,131 @@
         </div>
 
       </div>
+</div>
+
+</section>
+  
+<footer>
+  
+  <div class="row row-cinza-claro">
+   <div class="container">
+     <div class="row">
+      <div class="col-md-2 text-center">
+       <img class="logotipo" src="img/orlando-logo.png" alt="Logotipo">
+
+     </div>
+     <div class="col-md-10">
+     <div class="row row-cols">
+      <div class="col-md-4 col-popular-post">
+
+       <h4> POPULAR POST </h4>
+
+       <ul class="list-unstyled">
+        <li>
+         <h5> Neque porro quisquam est, quister.</h5>
+         <time> January 01, 2016 </time>
+       </li>
+
+       <li>
+         <h5> Neque porro quisquam est, quister.</h5>
+         <time> January 01, 2016 </time>
+       </li>
+
+     </ul>
+
+   </div>
 
 
+   <div class="col-md-4 col-links">
+     <h4>LINKS</h4>
+        <ul class="list-unstyled">
+     <li><a href="#"><i class="fa fa-angle-right"></i> Tickets </a></li>
+     <li><a href="#"><i class="fa fa-angle-right"></i> News </a></li>
+     <li><a href="#"><i class="fa fa-angle-right"></i> Schedule </a></li>
+      </ul>
+   </div>
 
+   <div class="col-md-4 col-get-in-touch">
+    <h4> GET IN TOUCH </h4>
+      <address>
+         <i class="fa fa-map-marker"></i> 618 E. South Street, Suite  510<br/>Orlando, FL32801
+
+      </address>
+      <p><a href="tel: "><i class="fa fa-phone"></i> 1.855.ORL.CITY</a></p>
+   
+ 
+
+  <ul class="list-unstyled list-socials">
+    
+    <li>
+      <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
+    </li>
+
+    <li>
+      <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
+    </li>
+
+    <li>
+      <a href="#" target="_blank"><i class="fa fa-instagram"></i></a>
+    </li>
+
+
+    <li>
+      <a href="#" target="_blank"><i class="fa fa-pinterest"></i></a>
+    </li>
+
+  </ul>
+
+</div>
+
+   
+
+     </div>
+    </div>
+   </div>
+  </div> 
+ </div> 
+ </div>
+ 
+   <div class="row row-cinza-escuro">
+    <div class="container">
+      <p class="pull-left">Copyright Orlando City Soccer 2017. Todos os direitos reservados</p>
+      <p class="pull-right text-roxo">Created By Dicson Dantas</p>
+    </div>
+
+  </div>
+
+</footer>
 
 <script src="lib/jquery/jquery.min.js"></script> 
 <script src="lib/bootstrap/js/bootstrap.min.js"></script> 
+<script>
+
+$(document).ready(function(){ 
+
+  $("#logotipo").on("mouseover", function(){
+
+    $("#banner h1").addClass("efeito");
+
+
+}).on("mouseout", function(){
+
+    $("#banner h1").removeClass("efeito");
+  });
+    
+    $("#input-search").on("focus", function(){
+  
+      $("li.search").addClass("ativo");
+    
+}).on("blur",function(){
+  $("li.search").removeClass("ativo");
+
+
+});
+
+});
+
+</script>
 
 </body>
 </html>
